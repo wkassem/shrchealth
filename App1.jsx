@@ -66,6 +66,9 @@ const TEAM = [
   { name: 'Imad M. Halimi', role: 'Nurse & Clinical Support', details: 'Nursing degree — USJ Lebanon. Mechanical Ventilation Specialist ensuring highest standards of patient care.' },
 ];
 
+const WHATSAPP_NUMBER = '9613780236';
+const WHATSAPP_DISPLAY = '+9613780236';
+
 const SERVICE_COLOR_STYLES = {
   blue: {
     glow: 'bg-blue-500',
@@ -405,8 +408,133 @@ const Team = () => (
   </section>
 );
 
+const BookingContact = () => {
+  const [formValues, setFormValues] = useState({
+    name: '',
+    phone: '',
+    service: '',
+    preferredDateTime: '',
+    message: '',
+  });
+
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const whatsappMessage = [
+      'New SHRC Appointment Request',
+      `Name: ${formValues.name}`,
+      `Phone: ${formValues.phone}`,
+      `Service: ${formValues.service}`,
+      `Preferred Day/Time: ${formValues.preferredDateTime}`,
+      `Message: ${formValues.message}`,
+    ].join('\n');
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <section id="contact" className="py-28 bg-slate-950 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-sm font-black text-blue-400 tracking-widest uppercase mb-4 flex items-center gap-4">
+            <span className="w-8 h-px bg-blue-400"></span> Contact & Booking
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Book an Appointment</h3>
+          <p className="text-slate-300 text-lg font-medium leading-relaxed">
+            Complete this form and WhatsApp opens instantly with your details pre-filled. Prefer direct contact? Reach us anytime on{' '}
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="text-blue-300 hover:text-blue-200 font-semibold">{WHATSAPP_DISPLAY}</a>.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
+          <div className="xl:col-span-5 space-y-4">
+            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-6">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-blue-300 mt-0.5" />
+                <div>
+                  <p className="font-bold">Location</p>
+                  <p className="text-slate-300 text-sm mt-1">Face to Nini Hospital, Hazem El Jisr Street, Tripoli, Lebanon</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-6">
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-blue-300 mt-0.5" />
+                <div>
+                  <p className="font-bold">Phone / WhatsApp</p>
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="text-slate-300 text-sm mt-1 inline-block hover:text-white">{WHATSAPP_DISPLAY}</a>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-6">
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-blue-300 mt-0.5" />
+                <div>
+                  <p className="font-bold">Opening Hours</p>
+                  <p className="text-slate-300 text-sm mt-1">Monday – Friday: 8:00 AM – 7:00 PM</p>
+                  <p className="text-slate-300 text-sm">Saturday: 8:00 AM – 2:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-3xl overflow-hidden border border-white/10">
+              <iframe
+                title="SHRC Map"
+                src="https://www.google.com/maps?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon&output=embed"
+                className="w-full h-72 border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <form onSubmit={onSubmit} className="xl:col-span-7 bg-white text-slate-900 rounded-3xl p-7 sm:p-8 border border-slate-200 shadow-2xl shadow-blue-900/20 space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label className="text-sm font-semibold text-slate-700">
+                Name
+                <input type="text" name="name" required value={formValues.name} onChange={onChange} className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              </label>
+              <label className="text-sm font-semibold text-slate-700">
+                Phone
+                <input type="tel" name="phone" required value={formValues.phone} onChange={onChange} className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              </label>
+            </div>
+            <label className="text-sm font-semibold text-slate-700 block">
+              Service
+              <select name="service" required value={formValues.service} onChange={onChange} className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500">
+                <option value="">Select a service</option>
+                {SERVICES.map((service) => (
+                  <option key={service.title} value={service.title}>{service.title}</option>
+                ))}
+              </select>
+            </label>
+            <label className="text-sm font-semibold text-slate-700 block">
+              Preferred Day / Time
+              <input type="text" name="preferredDateTime" required value={formValues.preferredDateTime} onChange={onChange} placeholder="e.g. Tuesday, 10:30 AM" className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+            </label>
+            <label className="text-sm font-semibold text-slate-700 block">
+              Message
+              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} placeholder="Tell us briefly about your condition or request." className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+            </label>
+            <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 text-white px-6 py-3.5 font-semibold hover:bg-slate-800 transition-colors">
+              Send on WhatsApp
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => (
-  <footer id="contact" className="bg-white pt-24 pb-12 border-t border-slate-200">
+  <footer className="bg-white pt-24 pb-12 border-t border-slate-200">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-blue-600 rounded-[2.5rem] p-10 sm:p-16 mb-24 relative overflow-hidden shadow-2xl shadow-blue-600/20">
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -420,7 +548,7 @@ const Footer = () => (
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-            <a href="https://wa.me/961000000" className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-colors">
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-colors">
               <Phone className="w-5 h-5" /> WhatsApp Us
             </a>
           </div>
@@ -525,6 +653,7 @@ export default function App() {
         <About />
         <Services />
         <Team />
+        <BookingContact />
       </main>
       <Footer />
     </div>

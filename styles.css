@@ -69,6 +69,18 @@ h1 {
   border-radius: 0.6rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
 .section {
   padding: 4rem 0;
 }
@@ -135,6 +147,82 @@ footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
   padding: 1.4rem 0 2rem;
+}
+
+.booking-shell {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.booking-intro p {
+  color: var(--muted);
+  margin: 0.6rem 0 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.info-card {
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: #f9fcff;
+  padding: 0.9rem;
+}
+
+.info-card p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.booking-form button {
+  border: none;
+  cursor: pointer;
+}
+
+.map-card {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.map-card iframe {
+  width: 100%;
+  min-height: 430px;
+  border: 0;
+  border-radius: 0.6rem;
 }
 
 @media (max-width: 600px) {
