@@ -67,6 +67,9 @@ const TEAM = [
   { name: 'Imad M. Halimi', role: 'Nurse & Clinical Support', details: 'Nursing degree — USJ Lebanon. Mechanical Ventilation Specialist.' },
 ];
 
+const WHATSAPP_NUMBER = '9613780236';
+const WHATSAPP_DISPLAY = '+9613780236';
+
 // --- COMPONENTS ---
 
 const Navbar = () => {
@@ -252,8 +255,123 @@ const Team = () => (
   </section>
 );
 
+const BookingContact = () => {
+  const [formValues, setFormValues] = useState({
+    name: '',
+    phone: '',
+    service: '',
+    preferredDateTime: '',
+    message: '',
+  });
+
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const whatsappMessage = [
+      'New SHRC Appointment Request',
+      `Name: ${formValues.name}`,
+      `Phone: ${formValues.phone}`,
+      `Service: ${formValues.service}`,
+      `Preferred Day/Time: ${formValues.preferredDateTime}`,
+      `Message: ${formValues.message}`,
+    ].join('\n');
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <section id="contact" className="py-24 bg-slate-50 border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3">Contact & Booking</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Book an Appointment</h3>
+          <p className="text-slate-600 leading-relaxed">
+            Fill in the form and WhatsApp opens with your details pre-filled. You can also call or message us directly on{' '}
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="font-semibold text-blue-600 hover:text-blue-700">{WHATSAPP_DISPLAY}</a>.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-5 space-y-4">
+            <div className="bg-white rounded-2xl border border-slate-200 p-6">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-blue-600 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900">Location</p>
+                  <p className="text-slate-600 text-sm mt-1">Face to Nini Hospital, Hazem El Jisr Street, Tripoli, Lebanon</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6">
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-blue-600 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900">Phone / WhatsApp</p>
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="text-slate-600 text-sm mt-1 inline-block hover:text-blue-700">{WHATSAPP_DISPLAY}</a>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6">
+              <p className="font-semibold text-slate-900">Opening Hours</p>
+              <p className="text-slate-600 text-sm mt-2">Monday – Friday: 8:00 AM – 7:00 PM</p>
+              <p className="text-slate-600 text-sm">Saturday: 8:00 AM – 2:00 PM</p>
+            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+              <iframe
+                title="SHRC Map"
+                src="https://www.google.com/maps?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon&output=embed"
+                className="w-full h-64 border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <form onSubmit={onSubmit} className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-6 md:p-8 space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label className="text-sm font-medium text-slate-700">
+                Name
+                <input type="text" name="name" required value={formValues.name} onChange={onChange} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              </label>
+              <label className="text-sm font-medium text-slate-700">
+                Phone
+                <input type="tel" name="phone" required value={formValues.phone} onChange={onChange} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              </label>
+            </div>
+            <label className="text-sm font-medium text-slate-700 block">
+              Service
+              <select name="service" required value={formValues.service} onChange={onChange} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500">
+                <option value="">Select a service</option>
+                {SERVICES.map((service) => (
+                  <option key={service.title} value={service.title}>{service.title}</option>
+                ))}
+              </select>
+            </label>
+            <label className="text-sm font-medium text-slate-700 block">
+              Preferred Day / Time
+              <input type="text" name="preferredDateTime" required value={formValues.preferredDateTime} onChange={onChange} placeholder="e.g. Tuesday, 10:30 AM" className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+            </label>
+            <label className="text-sm font-medium text-slate-700 block">
+              Message
+              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+            </label>
+            <button type="submit" className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+              Send on WhatsApp
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => (
-  <footer id="contact" className="bg-slate-900 pt-20 pb-10">
+  <footer className="bg-slate-900 pt-20 pb-10">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="lg:col-span-1">
@@ -307,8 +425,8 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-4">
               <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
-              <a href="https://wa.me/961000000" className="text-slate-300 hover:text-white transition-colors">
-                +961 00 000 000 (WhatsApp Available)
+              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="text-slate-300 hover:text-white transition-colors">
+                {WHATSAPP_DISPLAY} (WhatsApp Available)
               </a>
             </div>
           </div>
@@ -352,6 +470,7 @@ export default function App() {
         <About />
         <Services />
         <Team />
+        <BookingContact />
       </main>
       <Footer />
     </div>

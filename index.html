@@ -20,7 +20,10 @@
           Discover SHRC, then explore two React-powered page concepts built from
           <strong>App.jsx</strong> and <strong>App1.jsx</strong>.
         </p>
-        <a class="cta" href="/app">Open App.jsx page</a>
+        <div class="hero-actions">
+          <a class="cta" href="/app">Open App.jsx page</a>
+          <a class="cta cta-secondary" href="#contact">Book an Appointment</a>
+        </div>
       </div>
     </header>
 
@@ -68,6 +71,75 @@
           </div>
         </div>
       </section>
+
+      <section id="contact" class="section">
+        <div class="container booking-shell">
+          <div class="booking-intro card">
+            <h2>Book an Appointment</h2>
+            <p>
+              Fill out this form and we will open WhatsApp with your appointment details pre-filled.
+              You can also contact us directly on
+              <a href="https://wa.me/9613780236" target="_blank" rel="noopener noreferrer">+9613780236</a>.
+            </p>
+            <div class="info-grid">
+              <article class="info-card">
+                <h3>Location</h3>
+                <p>Face to Nini Hospital, Hazem El Jisr Street, Tripoli, Lebanon</p>
+              </article>
+              <article class="info-card">
+                <h3>Phone / WhatsApp</h3>
+                <p><a href="https://wa.me/9613780236" target="_blank" rel="noopener noreferrer">+9613780236</a></p>
+              </article>
+              <article class="info-card">
+                <h3>Opening Hours</h3>
+                <p>Monday – Friday: 8:00 AM – 7:00 PM<br />Saturday: 8:00 AM – 2:00 PM</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="booking-grid">
+            <form id="booking-form" class="card booking-form">
+              <label>
+                Full Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+              <label>
+                Service
+                <select name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Isokinetic Therapy">Isokinetic Therapy</option>
+                  <option value="Acupuncture">Acupuncture</option>
+                  <option value="Osteopathy">Osteopathy</option>
+                  <option value="Medical Thermography">Medical Thermography</option>
+                  <option value="Ergonomy">Ergonomy</option>
+                </select>
+              </label>
+              <label>
+                Preferred Day / Time
+                <input type="text" name="preferredDateTime" placeholder="e.g. Tuesday, 10:30 AM" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" placeholder="Tell us briefly about your condition or request." required></textarea>
+              </label>
+              <button type="submit" class="cta">Send via WhatsApp</button>
+            </form>
+
+            <div class="card map-card">
+              <iframe
+                title="SHRC Location Map"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -75,5 +147,23 @@
         <p>© SHRC — Saad Halimi Rehabilitation Center.</p>
       </div>
     </footer>
+    <script>
+      const bookingForm = document.getElementById('booking-form');
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const formData = new FormData(bookingForm);
+          const whatsappMessage = [
+            'New SHRC Appointment Request',
+            `Name: ${formData.get('name') || ''}`,
+            `Phone: ${formData.get('phone') || ''}`,
+            `Service: ${formData.get('service') || ''}`,
+            `Preferred Day/Time: ${formData.get('preferredDateTime') || ''}`,
+            `Message: ${formData.get('message') || ''}`,
+          ].join('\n');
+          window.open(`https://wa.me/9613780236?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener');
+        });
+      }
+    </script>
   </body>
 </html>
