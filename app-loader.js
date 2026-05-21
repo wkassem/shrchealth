@@ -10,7 +10,8 @@ function escapeHtml(value) {
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
+    .replaceAll("'", '&#39;')
+    .replaceAll('`', '&#96;');
 }
 
 function showError(mountId, message, error) {
@@ -54,6 +55,6 @@ export async function mountApp({ sourcePath, mountId = 'root' }) {
     }
     createRoot(mountNode).render(React.createElement(Component));
   } catch (error) {
-    showError(mountId, `Failed to load and mount component from ${sourcePath}`, error?.stack || error?.message || String(error));
+    showError(mountId, `Failed to load and mount component from ${sourcePath}`, error?.message || String(error));
   }
 }
