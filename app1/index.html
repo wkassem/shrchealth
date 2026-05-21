@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHRC Health homepage (App.jsx variant)." />
-    <title>SHRC Home (App.jsx)</title>
+    <title>SHRC Preview - App1.jsx</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="importmap">
@@ -21,18 +20,18 @@
   <body class="bg-slate-50 text-slate-800">
     <div class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <p class="text-sm font-semibold">Home: <span class="text-blue-600">App.jsx</span></p>
+        <p class="text-sm font-semibold">Preview: <span class="text-blue-600">App1.jsx</span></p>
         <div class="flex gap-4 text-sm">
-          <a class="font-medium text-blue-700 hover:underline" href="/">Home</a>
+          <a class="font-medium text-slate-700 hover:underline" href="/">Home</a>
           <a class="font-medium text-slate-700 hover:underline" href="/app">App.jsx route</a>
-          <a class="font-medium text-slate-700 hover:underline" href="/app1">App1.jsx route</a>
+          <a class="font-medium text-blue-700 hover:underline" href="/app1">App1.jsx route</a>
         </div>
       </div>
     </div>
     <div id="root"></div>
     <script type="module">
       import { mountApp } from '/app-loader.js';
-      mountApp({ sourcePath: '/App.jsx' });
+      mountApp({ sourcePath: '/App1.jsx' });
     </script>
   </body>
 </html>
