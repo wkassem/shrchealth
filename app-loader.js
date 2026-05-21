@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
+// Keep blob URLs alive briefly after dynamic import so slower browsers can finish module evaluation.
 const BLOB_URL_REVOKE_DELAY_MS = 30000;
 
 function escapeHtml(value) {
@@ -53,6 +54,6 @@ export async function mountApp({ sourcePath, mountId = 'root' }) {
     }
     createRoot(mountNode).render(React.createElement(Component));
   } catch (error) {
-    showError(mountId, `Failed to load and mount component from ${sourcePath}`, error);
+    showError(mountId, `Failed to load and mount component from ${sourcePath}`, error?.stack || error?.message || String(error));
   }
 }
