@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-// Keep blob URLs alive briefly after dynamic import so slower browsers can finish module evaluation.
+// Keep blob URLs alive briefly after dynamic import so slower browsers can finish evaluation and
+// any async dependency resolution before the temporary URL is revoked.
 const BLOB_URL_REVOKE_DELAY_MS = 30000;
 
 function escapeHtml(value) {
