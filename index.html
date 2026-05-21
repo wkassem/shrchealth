@@ -3,36 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHRC Health official homepage for Saad Halimi Rehabilitation Center in Tripoli, Lebanon." />
-    <title>SHRC Home (App.jsx)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "react": "https://esm.sh/react@18",
-          "react-dom/client": "https://esm.sh/react-dom@18/client",
-          "react/jsx-runtime": "https://esm.sh/react@18/jsx-runtime",
-          "lucide-react": "https://esm.sh/lucide-react?external=react"
-        }
-      }
-    </script>
+    <meta
+      name="description"
+      content="SHRC official homepage for Saad Halimi Rehabilitation Center in Tripoli, Lebanon."
+    />
+    <title>SHRC Home</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body class="bg-slate-50 text-slate-800">
-    <div class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <p class="text-sm font-semibold">Home: <span class="text-blue-600">App.jsx</span></p>
-        <div class="flex gap-4 text-sm">
-          <a class="font-medium text-blue-700 hover:underline" href="/">Home</a>
-          <a class="font-medium text-slate-700 hover:underline" href="/app">App.jsx route</a>
-          <a class="font-medium text-slate-700 hover:underline" href="/app1">App1.jsx route</a>
-        </div>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Saad Halimi Rehabilitation Center</p>
+        <h1>Personalized rehabilitation care in Tripoli, Lebanon.</h1>
+        <p class="subtitle">Three clearly separated pages for the SHRC site experience.</p>
+        <p class="lead">
+          Discover SHRC, then explore two React-powered page concepts built from
+          <strong>App.jsx</strong> and <strong>App1.jsx</strong>.
+        </p>
+        <a class="cta" href="/app">Open App.jsx page</a>
       </div>
-    </div>
-    <div id="root"></div>
-    <script type="module">
-      import { mountApp } from '/app-loader.js';
-      mountApp({ sourcePath: '/App.jsx' });
-    </script>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container grid two-col">
+          <div>
+            <h2>Welcome to SHRC</h2>
+            <p>
+              SHRC provides physiotherapy, osteopathy, acupuncture, and specialized
+              rehabilitation services with a patient-first approach.
+            </p>
+            <p>
+              Use the links on this page to access each version of the site as its
+              own dedicated route.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Available pages</h3>
+            <ul>
+              <li><a href="/">Home page</a></li>
+              <li><a href="/app">App.jsx page</a></li>
+              <li><a href="/app1">App1.jsx page</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2>What each page does</h2>
+          <div class="grid cards">
+            <article class="card">
+              <h3>Home</h3>
+              <p>A lightweight landing page built with plain HTML and the shared stylesheet.</p>
+            </article>
+            <article class="card">
+              <h3>App.jsx</h3>
+              <p>A React-based SHRC experience served on its own route at <strong>/app</strong>.</p>
+            </article>
+            <article class="card">
+              <h3>App1.jsx</h3>
+              <p>A second React-based concept served independently at <strong>/app1</strong>.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© SHRC — Saad Halimi Rehabilitation Center.</p>
+      </div>
+    </footer>
   </body>
 </html>
