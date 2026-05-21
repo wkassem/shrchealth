@@ -1,18 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Activity, CheckCircle2, ChevronRight, MapPin, Phone, 
-  Menu, X, Facebook, Instagram, Linkedin, Youtube, 
+  Menu, X, 
   Droplet, Flame, Stethoscope, Dumbbell, ShieldCheck, 
   Baby, Syringe, Wind, ArrowRight
 } from 'lucide-react';
 
+const FacebookIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12" />
+  </svg>
+);
+
+const InstagramIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7m5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5m0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5m4.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25" />
+  </svg>
+);
+
+const LinkedinIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20 20h-3.37v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V20H9.22V8.5h3.24v1.57h.05a3.55 3.55 0 0 1 3.19-1.75c3.41 0 4.04 2.24 4.04 5.15V20Z" />
+  </svg>
+);
+
+const YoutubeIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M21.58 7.19a2.76 2.76 0 0 0-1.94-1.95C17.9 4.75 12 4.75 12 4.75s-5.9 0-7.64.49A2.76 2.76 0 0 0 2.42 7.2 28.66 28.66 0 0 0 2 12a28.66 28.66 0 0 0 .42 4.81 2.76 2.76 0 0 0 1.94 1.95c1.74.49 7.64.49 7.64.49s5.9 0 7.64-.49a2.76 2.76 0 0 0 1.94-1.95A28.66 28.66 0 0 0 22 12a28.66 28.66 0 0 0-.42-4.81ZM10 15.5v-7l6 3.5-6 3.5Z" />
+  </svg>
+);
+
 // --- DATA DEFINITIONS ---
 
 const SOCIAL_LINKS = [
-  { name: 'Facebook', url: 'https://www.facebook.com/SHRChealth', icon: Facebook },
-  { name: 'Instagram', url: 'https://instagram.com/shrchealth', icon: Instagram },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/company/shrchealth', icon: Linkedin },
-  { name: 'YouTube', url: 'https://www.youtube.com/channel/UCKnAruS1_PaR3XhLlYxvqaA', icon: Youtube },
+  { name: 'Facebook', url: 'https://www.facebook.com/SHRChealth', icon: FacebookIcon },
+  { name: 'Instagram', url: 'https://instagram.com/shrchealth', icon: InstagramIcon },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/company/shrchealth', icon: LinkedinIcon },
+  { name: 'YouTube', url: 'https://www.youtube.com/channel/UCKnAruS1_PaR3XhLlYxvqaA', icon: YoutubeIcon },
   { 
     name: 'TikTok', 
     url: 'https://www.tiktok.com/@shrchealth/', 
@@ -79,7 +103,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-slate-200 absolute w-full px-4 py-4 space-y-4">
           {['About', 'Services', 'Team', 'Contact'].map((item) => (
@@ -124,10 +147,9 @@ const Hero = () => (
       </div>
     </div>
     
-    {/* Abstract Background Element */}
     <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 opacity-10 pointer-events-none">
       <svg width="600" height="600" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#2563EB" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.6,-46.3C91.4,-33.5,98,-18.1,97.7,-2.9C97.4,12.3,90.2,27.3,80.1,39.9C70,52.5,57,62.7,42.8,70.1C28.6,77.5,13.2,82.1,-2.4,86C-18,89.9,-33.9,93.1,-47.9,86.5C-61.9,79.9,-74,63.5,-81.4,47.8C-88.8,32.1,-91.5,17.1,-89.6,2.9C-87.7,-11.3,-81.2,-24.8,-73.2,-36.8C-65.2,-48.8,-55.7,-59.3,-44.2,-67.7C-32.7,-76.1,-19.2,-82.4,-3.5,-76.6C12.2,-70.8,24.4,-62.9,44.7,-76.4Z" transform="translate(100 100)" />
+        <path fill="#2563EB" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.6,-46.3C91.4,-33.5,98,-18.1,97.7,-2.9C97.4,12.3,90.2,27.3,80.1,39.9C70,52.5,57,62.7,42.8,70.1C28.6,77.5,13.2,82.1,-2.4,86C-18,89.9,-36,93.2,-49.5,86.5C-63,79.8,-72,63.1,-78.8,46.2C-85.7,29.3,-90.5,12.1,-89.4,-4.7C-88.4,-21.5,-81.5,-37.9,-70.8,-49.8C-60,-61.7,-45.4,-69,-31.2,-75.6C-17,-82.3,-3.1,-88.3,11.9,-90.3C26.8,-92.2,53.6,-90.1,44.7,-76.4Z" transform="translate(100 100)" />
       </svg>
     </div>
   </section>
@@ -144,7 +166,7 @@ const About = () => (
             Founded in 1990 by Dr. Mohamad Halimi, the Saad Halimi Rehabilitation Center has served patients across Tripoli and North Lebanon for over three decades.
           </p>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            We provide therapeutic treatment wherever movement and function are threatened by aging, injury, disease, or environmental factors. Fully equipped with state-of-the-art rehabilitation technology, we combine Western evidence-based medicine with effective Eastern therapeutic traditions.
+            We provide therapeutic treatment wherever movement and function are threatened by aging, injury, disease, or environmental factors. Fully equipped with state-of-the-art rehabilitation tools, we tailor care to each patient.
           </p>
           <div className="space-y-4">
             {['Evidence-based medicine', 'State-of-the-art technology', 'Holistic approach to healing'].map((item, i) => (
@@ -156,7 +178,6 @@ const About = () => (
           </div>
         </div>
         <div className="relative">
-          {/* Mockup for image placement. Ensure high quality clinical asset in production */}
           <div className="aspect-square bg-slate-200 rounded-2xl overflow-hidden relative shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent mix-blend-multiply"></div>
             <img 
@@ -217,7 +238,6 @@ const Team = () => (
         {TEAM.map((member, index) => (
           <div key={index} className="text-center group">
             <div className="w-32 h-32 mx-auto bg-slate-100 rounded-full mb-6 flex items-center justify-center text-3xl font-bold text-slate-300 group-hover:bg-blue-50 transition-colors">
-               {/* Use Initials for missing photos */}
               {member.name.split(' ').map(n => n[0]).join('').replace('D.', '')}
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h4>
@@ -236,8 +256,6 @@ const Footer = () => (
   <footer id="contact" className="bg-slate-900 pt-20 pb-10">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        
-        {/* Brand */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-6 text-white">
             <Activity className="w-8 h-8 text-blue-500" />
@@ -264,7 +282,6 @@ const Footer = () => (
           </div>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h4 className="text-white font-semibold mb-6">Quick Links</h4>
           <ul className="space-y-3">
@@ -278,7 +295,6 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div className="lg:col-span-2">
           <h4 className="text-white font-semibold mb-6">Contact & Location</h4>
           <div className="space-y-4">
@@ -291,7 +307,6 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-4">
               <Phone className="w-5 h-5 text-blue-500 flex-shrink-0" />
-              {/* Note: Update href with actual WhatsApp logic/number in production */}
               <a href="https://wa.me/961000000" className="text-slate-300 hover:text-white transition-colors">
                 +961 00 000 000 (WhatsApp Available)
               </a>
@@ -322,7 +337,6 @@ const Footer = () => (
 );
 
 export default function App() {
-  // Ensure smooth scroll behavior on root html element
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
     return () => {
