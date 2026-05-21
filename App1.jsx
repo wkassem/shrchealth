@@ -520,7 +520,7 @@ const BookingContact = () => {
             </label>
             <label className="text-sm font-semibold text-slate-700 block">
               Message
-              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} placeholder="Tell us briefly about your condition or request." className="mt-1.5 w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
             </label>
             <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 text-white px-6 py-3.5 font-semibold hover:bg-slate-800 transition-colors">
               Send on WhatsApp

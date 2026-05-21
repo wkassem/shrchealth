@@ -3,7 +3,7 @@ import {
   Activity, CheckCircle2, ChevronRight, MapPin, Phone, 
   Menu, X, 
   Droplet, Flame, Stethoscope, Dumbbell, ShieldCheck, 
-  Baby, Syringe, Wind, ArrowRight
+  Baby, Syringe, Wind, ArrowRight, Clock
 } from 'lucide-react';
 
 const FacebookIcon = (props) => (
@@ -316,9 +316,14 @@ const BookingContact = () => {
               </div>
             </div>
             <div className="bg-white rounded-2xl border border-slate-200 p-6">
-              <p className="font-semibold text-slate-900">Opening Hours</p>
-              <p className="text-slate-600 text-sm mt-2">Monday – Friday: 8:00 AM – 7:00 PM</p>
-              <p className="text-slate-600 text-sm">Saturday: 8:00 AM – 2:00 PM</p>
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-blue-600 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900">Opening Hours</p>
+                  <p className="text-slate-600 text-sm mt-1">Monday – Friday: 8:00 AM – 7:00 PM</p>
+                  <p className="text-slate-600 text-sm">Saturday: 8:00 AM – 2:00 PM</p>
+                </div>
+              </div>
             </div>
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
               <iframe
@@ -357,7 +362,7 @@ const BookingContact = () => {
             </label>
             <label className="text-sm font-medium text-slate-700 block">
               Message
-              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
+              <textarea name="message" rows={4} required value={formValues.message} onChange={onChange} placeholder="Tell us briefly about your condition or request." className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
             </label>
             <button type="submit" className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
               Send on WhatsApp
