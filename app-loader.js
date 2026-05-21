@@ -1,6 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
+const BLOB_URL_REVOKE_DELAY_MS = 30000;
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -31,7 +33,7 @@ async function importCompiledModule(sourcePath) {
 
   const blobUrl = URL.createObjectURL(new Blob([code], { type: 'text/javascript' }));
   const module = await import(blobUrl);
-  setTimeout(() => URL.revokeObjectURL(blobUrl), 30000);
+  setTimeout(() => URL.revokeObjectURL(blobUrl), BLOB_URL_REVOKE_DELAY_MS);
   return module;
 }
 
@@ -51,6 +53,6 @@ export async function mountApp({ sourcePath, mountId = 'root' }) {
     }
     createRoot(mountNode).render(React.createElement(Component));
   } catch (error) {
-    showError(mountId, `Unable to render ${sourcePath}`, error);
+    showError(mountId, `Failed to load and mount component from ${sourcePath}`, error);
   }
 }
