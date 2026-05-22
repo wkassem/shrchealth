@@ -1,878 +1,610 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="SHRC - Saad Halimi Rehabilitation Center. Comprehensive rehabilitation care combining modern physiotherapy with evidence-based complementary medicine since 1990."
-    />
-    <meta
-      name="keywords"
-      content="rehabilitation, physiotherapy, osteopathy, acupuncture, isokinetic therapy, thermography, health clinic, Tripoli Lebanon"
-    />
+    <meta name="description" content="SHRC - Saad Halimi Rehabilitation Center. Comprehensive rehabilitation care combining modern physiotherapy with evidence-based complementary medicine since 1990." />
+    <meta name="keywords" content="rehabilitation, physiotherapy, osteopathy, acupuncture, isokinetic therapy, thermography, health clinic, Tripoli Lebanon" />
     <meta property="og:title" content="SHRC - Saad Halimi Rehabilitation Center" />
-    <meta
-      property="og:description"
-      content="Personalized Care. Complete Recovery. Comprehensive rehabilitation center in Tripoli, Lebanon."
-    />
+    <meta property="og:description" content="Personalized Care. Complete Recovery. Comprehensive rehabilitation center in Tripoli, Lebanon." />
     <meta property="og:type" content="website" />
-    <title>SHRC - Saad Halimi Rehabilitation Center | Rehabilitation Care in Tripoli</title>
+    <title>SHRC &mdash; Saad Halimi Rehabilitation Center | Tripoli, Lebanon</title>
     <link rel="stylesheet" href="/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="container nav-container">
-        <div class="logo">
-          <a href="#home" class="logo-link">
-            <h2>SHRC</h2>
-            <span class="logo-subtitle">Rehabilitation Center</span>
-          </a>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#conditions">Conditions</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#products">Shop</a></li>
-          <li><a href="#contact">Book Now</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
+    <!-- NAVBAR -->
+    <div class="navbar-wrap" id="navbarWrap">
+      <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+          <a href="#home" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fas fa-heartbeat"></i></div>
+            <span class="nav-logo-name">SHRC<span class="nav-logo-dot">.</span></span>
+          </a>
+          <div class="nav-pill">
+            <a href="#about"      class="nav-link">About</a>
+            <a href="#services"   class="nav-link">Services</a>
+            <a href="#conditions" class="nav-link">Conditions</a>
+            <a href="#team"       class="nav-link">Team</a>
+          </div>
+          <a href="#contact" class="btn btn-dark nav-cta">
+            Book Visit <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+          <a href="#about"      class="mobile-link">About</a>
+          <a href="#services"   class="mobile-link">Services</a>
+          <a href="#conditions" class="mobile-link">Conditions</a>
+          <a href="#team"       class="mobile-link">Team</a>
+          <a href="#contact"    class="mobile-link mobile-link--cta">Book Visit</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
     <header class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Personalized Care.<br>Complete Recovery.</h1>
-          <p class="hero-subtitle">
-            At SHRC, we design treatment programs around your personal goals — combining
-            modern physiotherapy, osteopathy, and acupuncture to help you return to the life you love.
+      <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+      <div class="container hero-container">
+        <div class="hero-text reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Accepting New Patients &middot; Tripoli, Lebanon
+          </div>
+          <h1 class="hero-title">
+            Precision care.<br>
+            <span class="gradient-text">Optimal recovery.</span>
+          </h1>
+          <p class="hero-desc">
+            Integrative physical therapy and osteopathy tailored to your anatomy. We combine
+            modern diagnostics with evidence-based treatments to restore your mobility and
+            relieve pain permanently.
           </p>
           <div class="hero-actions">
-            <a class="cta" href="#contact">Book an Appointment</a>
-            <a class="cta cta-secondary" href="#services">Our Services</a>
+            <a href="#contact" class="btn btn-primary">
+              Schedule Consultation <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#about" class="btn btn-outline-neutral">
+              Discover Our Method
+            </a>
+          </div>
+        </div>
+        <div class="hero-media reveal reveal--delay-2">
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&w=1200&q=80"
+              alt="Physical therapy session at SHRC" class="hero-card-img" />
+            <div class="hero-card-overlay" aria-hidden="true"></div>
+            <div class="hero-card-footer">
+              <div class="hero-card-footer-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="hero-card-footer-text">
+                <strong>Advanced Diagnostics</strong>
+                <span>HUMAC&reg; NORM&trade; Isokinetic Technology</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- About Section -->
+
+      <!-- ABOUT -->
       <section class="section about" id="about">
-        <div class="container">
-          <h2>A Legacy of Rehabilitation in Lebanon</h2>
-          <div class="grid two-col">
-            <div class="about-content">
-              <p class="intro-text">
-                Founded in 1990 by Dr. Mohamad Halimi, the Saad Halimi Rehabilitation Center has
-                served patients across Tripoli and North Lebanon for over three decades.
-              </p>
-              <p>
-                Our purpose is to help you continue participating in your daily activities and
-                life roles. We design treatment programs based on both the findings of our
-                evaluation and your personal goals — because movement and function matter to every
-                aspect of your life.
-              </p>
-              <p>
-                We provide therapeutic treatment wherever movement and function are threatened
-                by aging, injury, disease, or environmental factors, with one goal: improving
-                your quality of life.
-              </p>
+        <div class="container about-container">
+          <div class="about-images reveal reveal--from-left">
+            <div class="about-img-main">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?auto=format&fit=crop&w=1000&q=80"
+                alt="SHRC clinic environment" loading="lazy" />
             </div>
+            <div class="about-img-secondary">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                alt="Therapy session" loading="lazy" />
+            </div>
+            <div class="about-years-badge">
+              <span class="about-years-num">30+</span>
+              <span class="about-years-lbl">Years of<br>Legacy</span>
+            </div>
+          </div>
+          <div class="about-content reveal reveal--from-right">
+            <span class="section-label">About SHRC</span>
+            <h2 class="about-title">A legacy of healing.<br>A future of innovation.</h2>
+            <p>Founded in 1990 by Dr. Mohamad Halimi, the Saad Halimi Rehabilitation Center has
+            defined the standard of care for patients across Tripoli and North Lebanon for over
+            three decades.</p>
+            <p>We don&rsquo;t just treat symptoms &mdash; we investigate biomechanical root causes. By
+            integrating Western evidence-based technology with highly effective Eastern therapeutic
+            traditions, we create individualized recovery programs that last.</p>
             <div class="about-features">
-              <div class="feature-item">
-                <i class="fas fa-medal"></i>
-                <h3>HUMAC® NORM™ Isokinetic Technology</h3>
-                <p>The gold standard in isokinetic testing and rehabilitation — quantifying
-                progress with precision before and after every treatment course.</p>
+              <div class="about-feature">
+                <i class="fas fa-circle-check"></i>
+                <div><strong>Holistic Approach</strong><span>Treating the whole system</span></div>
               </div>
-              <div class="feature-item">
-                <i class="fas fa-globe"></i>
-                <h3>International Partnerships</h3>
-                <p>Collaboration with Harvard Vanguard, CSMi at Massachusetts General Hospital, and
-                Tianjin TCM University.</p>
+              <div class="about-feature">
+                <i class="fas fa-circle-check"></i>
+                <div><strong>Global Standards</strong><span>Harvard &amp; CSMi partnerships</span></div>
               </div>
-              <div class="feature-item">
-                <i class="fas fa-leaf"></i>
-                <h3>Integrative Approach</h3>
-                <p>SHRC is fully equipped with state-of-the-art rehabilitation technology, combining
-                Western evidence-based medicine with effective Eastern therapeutic traditions.</p>
+              <div class="about-feature">
+                <i class="fas fa-circle-check"></i>
+                <div><strong>Advanced Technology</strong><span>Isokinetic &amp; Thermography</span></div>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-circle-check"></i>
+                <div><strong>Expert Team</strong><span>Internationally certified</span></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="section services" id="services">
+      <!-- SERVICES -->
+      <section class="section services-section" id="services">
         <div class="container">
-          <h2>Our Specialized Services</h2>
-          <p class="section-intro">Click any service to learn more about our treatment approach and technology</p>
+          <div class="services-header reveal">
+            <div>
+              <span class="section-label">Clinical Expertise</span>
+              <h2 class="services-title">Comprehensive disciplines<br>for complete recovery.</h2>
+            </div>
+            <p class="services-subtitle">Browse our specialized treatments, carefully selected to address
+            complex musculoskeletal and neurological conditions.</p>
+          </div>
           <div class="services-grid">
-            <div class="service-card">
-              <div class="service-number">01</div>
+
+            <div class="service-card service-card--large reveal" data-color="blue">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-chart-bar"></i></div>
               <h3>Isokinetic Therapy</h3>
-              <p>Using the HUMAC® NORM™ system, we quantify muscular deficits before and after
-              treatment — designing precise rehabilitation programs and objectively measuring
-              your recovery.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Quantify muscular deficits with HUMAC&reg; NORM&trade; for precise, data-driven
+              rehabilitation programs. Objective measurements before and after treatment guide
+              every step of your recovery journey.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">02</div>
+
+            <div class="service-card reveal reveal--delay-1" data-color="indigo">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-spa"></i></div>
               <h3>Acupuncture</h3>
-              <p>Drawing from Chinese and Japanese traditions, our acupuncture releases active
-              and latent trigger points, reduces pain pathways, and restores structural balance
-              in the body.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Releases trigger points, reduces pain pathways, and restores structural balance
+              through Eastern traditions.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">03</div>
+
+            <div class="service-card reveal reveal--delay-2" data-color="emerald">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-person-walking"></i></div>
               <h3>Osteopathy</h3>
-              <p>Treating the body holistically — addressing spinal blockages, pelvic torsion,
-              and musculoskeletal dysfunction to relieve back pain, headaches, digestive issues,
-              and dizziness.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Holistic treatment addressing spinal blockages, pelvic torsion, and deep
+              musculoskeletal dysfunction.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">04</div>
+
+            <div class="service-card reveal" data-color="orange">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-fire-flame-curved"></i></div>
               <h3>Medical Thermography</h3>
-              <p>Infrared imaging that visualizes pain and disease quickly and non-invasively. A
-              powerful diagnostic tool that identifies the root cause of your symptoms before
-              treatment begins.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Advanced infrared diagnostic technology visualizing pain and disease
+              non-invasively before treatment begins.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">05</div>
+
+            <div class="service-card reveal reveal--delay-1" data-color="slate">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-desktop"></i></div>
               <h3>Ergonomy</h3>
-              <p>We evaluate your workplace, sleep habits, and daily activities to identify risk
-              factors and recommend ergonomic solutions — preventing musculoskeletal problems
-              before they develop.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Comprehensive workplace and lifestyle evaluation to correct posture and
+              prevent long-term musculoskeletal injuries.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">06</div>
-              <h3>Women's Health</h3>
-              <p>Specialized pelvic rehabilitation for urinary incontinence, uterine prolapse,
-              dyspareunia, vaginismus, and menstruation-related back pain — in a confidential,
-              caring environment.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+
+            <div class="service-card reveal reveal--delay-2" data-color="pink">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-venus"></i></div>
+              <h3>Women&rsquo;s Health</h3>
+              <p>Specialized pelvic floor rehabilitation for incontinence, prolapse, and related
+              conditions in a confidential environment.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">07</div>
+
+            <div class="service-card reveal" data-color="violet">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-syringe"></i></div>
               <h3>SkinPen Microneedling</h3>
-              <p>The first FDA-cleared microneedling device. Clinically proven to improve acne
-              scars and wrinkles with minimal downtime and results lasting up to six months.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>FDA-cleared medical device for skin rejuvenation, naturally stimulating
+              collagen and elastin production.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">08</div>
+
+            <div class="service-card reveal reveal--delay-1" data-color="sky">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-wind"></i></div>
               <h3>Cupping Therapy</h3>
-              <p>Reduces inflammation and muscle tension, enhances blood circulation, stimulates
-              the immune system, and provides effective relief for back pain and migraines.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Reduces deep tissue inflammation, enhances blood circulation, and provides
+              rapid relief for back pain and migraines.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card">
-              <div class="service-number">09</div>
+
+            <div class="service-card reveal reveal--delay-2" data-color="teal">
+              <div class="service-glow" aria-hidden="true"></div>
+              <div class="service-icon-wrap"><i class="fas fa-droplet"></i></div>
               <h3>LPG Body Treatment</h3>
-              <p>Reduces cellulite, tightens skin, boosts circulation and lymphatic drainage,
-              sculpts the body and leaves skin visibly smoother, firmer, and more toned.</p>
-              <a href="#" class="learn-more">+ Learn More</a>
+              <p>Non-invasive mechanical cellular stimulation to reduce cellulite, tighten
+              skin, and boost lymphatic drainage.</p>
+              <a href="#contact" class="service-link">Explore treatment <i class="fas fa-arrow-right"></i></a>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Conditions Section -->
-      <section class="section conditions" id="conditions">
+      <!-- CONDITIONS -->
+      <section class="section conditions-section" id="conditions">
         <div class="container">
-          <h2>Find Care for Your Condition</h2>
-          <p class="section-intro">Not sure which service is right for you? Browse by condition and we'll guide you to the right treatment.</p>
+          <div class="conditions-header reveal">
+            <span class="section-label">Find Your Treatment</span>
+            <h2>Not sure which service is right for you?</h2>
+            <p class="conditions-subtitle">Browse by condition and we&rsquo;ll guide you to the right treatment.</p>
+          </div>
           <div class="conditions-grid">
-            <div class="condition-card">
+
+            <div class="condition-card reveal">
               <h3>Low Back Pain</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Physiotherapy</span>
-                <span class="treatment-tag">Osteopathy</span>
-                <span class="treatment-tag">Acupuncture</span>
-                <span class="treatment-tag">Cupping</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Physiotherapy</span>
+                <span class="condition-tag">Osteopathy</span>
+                <span class="condition-tag">Acupuncture</span>
+                <span class="condition-tag">Cupping</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
+
+            <div class="condition-card reveal reveal--delay-1">
               <h3>Neck Pain</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Osteopathy</span>
-                <span class="treatment-tag">Acupuncture</span>
-                <span class="treatment-tag">Isokinetic</span>
-                <span class="treatment-tag">Ergonomy</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Osteopathy</span>
+                <span class="condition-tag">Acupuncture</span>
+                <span class="condition-tag">Isokinetic</span>
+                <span class="condition-tag">Ergonomy</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
+
+            <div class="condition-card reveal reveal--delay-2">
               <h3>Knee Pain</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Isokinetic</span>
-                <span class="treatment-tag">Physiotherapy</span>
-                <span class="treatment-tag">Osteopathy</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Isokinetic</span>
+                <span class="condition-tag">Physiotherapy</span>
+                <span class="condition-tag">Osteopathy</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
+
+            <div class="condition-card reveal reveal--delay-3">
               <h3>Shoulder Pain</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Isokinetic</span>
-                <span class="treatment-tag">Physiotherapy</span>
-                <span class="treatment-tag">Acupuncture</span>
-                <span class="treatment-tag">Cupping</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Isokinetic</span>
+                <span class="condition-tag">Physiotherapy</span>
+                <span class="condition-tag">Acupuncture</span>
+                <span class="condition-tag">Cupping</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
-              <h3>Migraines & Headaches</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Acupuncture</span>
-                <span class="treatment-tag">Osteopathy</span>
-                <span class="treatment-tag">Cupping Therapy</span>
+
+            <div class="condition-card reveal">
+              <h3>Migraines &amp; Headaches</h3>
+              <div class="condition-tags">
+                <span class="condition-tag">Acupuncture</span>
+                <span class="condition-tag">Osteopathy</span>
+                <span class="condition-tag">Cupping Therapy</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
+
+            <div class="condition-card reveal reveal--delay-1">
               <h3>Sports Injuries</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Isokinetic</span>
-                <span class="treatment-tag">Physiotherapy</span>
-                <span class="treatment-tag">Thermography</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Isokinetic</span>
+                <span class="condition-tag">Physiotherapy</span>
+                <span class="condition-tag">Thermography</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
+
+            <div class="condition-card reveal reveal--delay-2">
               <h3>Post-Surgical Recovery</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Isokinetic</span>
-                <span class="treatment-tag">Physiotherapy</span>
-                <span class="treatment-tag">Osteopathy</span>
+              <div class="condition-tags">
+                <span class="condition-tag">Isokinetic</span>
+                <span class="condition-tag">Physiotherapy</span>
+                <span class="condition-tag">Osteopathy</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="condition-card">
-              <h3>Women's Health</h3>
-              <div class="treatments">
-                <span class="treatment-tag">Pelvic Rehabilitation</span>
-                <span class="treatment-tag">Women's Health Program</span>
+
+            <div class="condition-card reveal reveal--delay-3">
+              <h3>Women&rsquo;s Health</h3>
+              <div class="condition-tags">
+                <span class="condition-tag">Pelvic Rehabilitation</span>
+                <span class="condition-tag">Women&rsquo;s Health Program</span>
               </div>
-              <a href="#contact" class="view-link">View Treatments →</a>
+              <a href="#contact" class="condition-link">View Treatments <i class="fas fa-arrow-right"></i></a>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Team Section -->
-      <section class="section team" id="team">
+      <!-- TEAM (dark) -->
+      <section class="section team-section" id="team">
+        <div class="team-bg-blob" aria-hidden="true"></div>
         <div class="container">
-          <h2>Meet the Team</h2>
-          <p class="section-intro">Our specialists combine expertise, education, and decades of clinical experience</p>
+          <div class="team-header reveal">
+            <span class="section-label section-label--light">Medical Directors</span>
+            <h2 class="team-title">Pioneers in physical medicine.</h2>
+            <p class="team-subtitle">A multidisciplinary team combining decades of clinical practice
+            with international academic rigor.</p>
+          </div>
           <div class="team-grid">
-            <div class="team-card">
-              <div class="team-avatar">SH</div>
-              <h3>Dr. Saad M. Halimi</h3>
-              <p class="team-role">Director</p>
-              <p class="team-credentials">DPT · Master in Manual Therapy & Osteopathy · Licensed Acupuncturist</p>
-              <div class="team-education">
-                <p><strong>Education:</strong></p>
-                <ul>
-                  <li>Bachelor in Physical Therapy, 2005</li>
-                  <li>Master in Manual Therapy & Osteopathy, 2008</li>
-                  <li>Licensed Acupuncturist — USJ Lebanon</li>
-                  <li>Tianjin TCM University, China</li>
-                  <li>Harvard University, USA</li>
-                </ul>
-              </div>
-            </div>
-            <div class="team-card">
+
+            <div class="team-card reveal">
               <div class="team-avatar">MH</div>
               <h3>Dr. Mohamad Halimi</h3>
-              <p class="team-role">Founder & Physiotherapist</p>
-              <p class="team-credentials">Diploma in Physiotherapy · Isokinetic Specialist</p>
-              <div class="team-education">
-                <p><strong>Education:</strong></p>
-                <ul>
-                  <li>Diploma in Physiotherapy — Nantes, France, 1980</li>
-                  <li>Isokinetic specialist since 1987, France</li>
-                  <li>Over 40 years of clinical expertise</li>
-                </ul>
-              </div>
+              <span class="team-role-badge">Founder &amp; Physiotherapist</span>
+              <p>Diploma in Physiotherapy, France (1980). Over 40 years of clinical excellence
+              and innovation in physical therapy.</p>
             </div>
-            <div class="team-card">
+
+            <div class="team-card reveal reveal--delay-1">
+              <div class="team-avatar">SH</div>
+              <h3>Dr. Saad M. Halimi</h3>
+              <span class="team-role-badge">Director &mdash; DPT, Ms.Ost, L.Ac</span>
+              <p>Master in Manual Therapy &amp; Osteopathy. Licensed Acupuncturist integrating
+              US, French, and Chinese methodologies.</p>
+            </div>
+
+            <div class="team-card reveal reveal--delay-2">
               <div class="team-avatar">IH</div>
               <h3>Imad M. Halimi</h3>
-              <p class="team-role">Nurse & Clinical Support</p>
-              <p class="team-credentials">Nursing Professional</p>
-              <div class="team-education">
-                <p><strong>Education:</strong></p>
-                <ul>
-                  <li>Nursing degree — USJ Lebanon</li>
-                  <li>Mechanical Ventilation Specialist</li>
-                  <li>UPEC, France</li>
-                </ul>
-              </div>
+              <span class="team-role-badge">Nurse &amp; Clinical Support</span>
+              <p>Nursing degree &mdash; USJ Lebanon. Mechanical Ventilation Specialist ensuring
+              the highest standards of patient care.</p>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Products Section -->
-      <section class="section products" id="products">
+      <!-- CONTACT — CONSOLIDATED -->
+      <section class="section contact-section" id="contact">
+        <div class="contact-blob contact-blob--1" aria-hidden="true"></div>
+        <div class="contact-blob contact-blob--2" aria-hidden="true"></div>
         <div class="container">
-          <h2>Shop</h2>
-          <p class="section-intro">Ergonomic products and rehabilitation accessories recommended by our specialists.</p>
-          <div class="products-grid">
-            <div class="product-card">
-              <div class="product-image">
-                <i class="fas fa-box"></i>
-              </div>
-              <h3>Product Name</h3>
-              <p>Short description of the product and its benefits.</p>
-              <div class="product-price">$00</div>
-              <a href="https://wa.me/9613780236?text=Hi%2C%20I%27d%20like%20to%20order%20a%20product%20from%20SHRC." target="_blank" class="cta-small">Order on WhatsApp 📦</a>
-            </div>
-            <div class="product-card coming-soon">
-              <div class="product-image">
-                <i class="fas fa-box"></i>
-              </div>
-              <p>More products coming soon</p>
-              <div class="coming-soon-badge">📦</div>
-            </div>
-            <div class="product-card coming-soon">
-              <div class="product-image">
-                <i class="fas fa-box"></i>
-              </div>
-              <p>More products coming soon</p>
-              <div class="coming-soon-badge">📦</div>
-            </div>
+          <div class="contact-header reveal">
+            <span class="section-label section-label--light">Contact &amp; Booking</span>
+            <h2 class="contact-title">Book an Appointment</h2>
+            <p class="contact-subtitle">Complete this form and WhatsApp opens instantly with your
+            details pre-filled. Prefer direct contact? Reach us on
+            <a href="https://wa.me/9613780236" class="contact-phone-link">+961 3 780 236</a>.</p>
           </div>
-        </div>
-      </section>
 
-      <!-- Contact Section -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <h2>Book an Appointment</h2>
-          <p class="section-intro">Fill in the form below and we'll open WhatsApp for you with your details
-          pre-filled — or reach us directly by phone.</p>
-          
-          <div class="contact-wrapper">
-            <div class="contact-info-grid">
-              <div class="contact-info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Location</h3>
-                <p>Face to Nini Hospital<br>Hazem El Jisr Street<br>Tripoli, Lebanon</p>
-              </div>
-              <div class="contact-info-item">
-                <i class="fas fa-phone"></i>
-                <h3>Phone & WhatsApp</h3>
-                <p><a href="tel:+9613780236" class="contact-link">+961 3 780 236</a></p>
-              </div>
-              <div class="contact-info-item">
-                <i class="fas fa-clock"></i>
-                <h3>Opening Hours</h3>
-                <p>Monday – Friday: 8:00 AM – 7:00 PM<br>Saturday: 8:00 AM – 2:00 PM</p>
-              </div>
-            </div>
+          <div class="contact-grid">
 
-            <div class="contact-form-wrapper">
-              <form class="booking-form" id="bookingForm">
-                <h3>Send us a message</h3>
-                <p class="form-hint">We'll reply on WhatsApp as soon as possible — usually within a few hours.</p>
-                
-                <div class="form-group">
-                  <input type="text" placeholder="Full Name" name="name" required>
-                </div>
-                <div class="form-group">
-                  <input type="tel" placeholder="Phone Number" name="phone" required>
-                </div>
-                <div class="form-group">
-                  <select name="service" required>
-                    <option value="">Select a Service</option>
-                    <option value="Isokinetic Therapy">Isokinetic Therapy</option>
-                    <option value="Acupuncture">Acupuncture</option>
-                    <option value="Osteopathy">Osteopathy</option>
-                    <option value="Medical Thermography">Medical Thermography</option>
-                    <option value="Ergonomy">Ergonomy</option>
-                    <option value="Women's Health">Women's Health</option>
-                    <option value="SkinPen Microneedling">SkinPen Microneedling</option>
-                    <option value="Cupping Therapy">Cupping Therapy</option>
-                    <option value="LPG Body Treatment">LPG Body Treatment</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="Preferred Day / Time (e.g. Tuesday, 10:30 AM)" name="time" required>
-                </div>
-                <div class="form-group">
-                  <textarea placeholder="Tell us briefly about your condition or request." name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="cta">Send via WhatsApp</button>
-              </form>
-
-              <div class="contact-map">
-                <iframe title="SHRC Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.5698461145936!2d35.83143!3d34.436079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1524f1a8d3d3d3d3%3A0xd3d3d3d3d3d3d3d3!2sFace%20to%20Nini%20Hospital%2C%20Tripoli!5e0!3m2!1sen!2slb!4v1234567890" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-info">
-            <h3>SHRC</h3>
-            <p>Saad Halimi Rehabilitation Center</p>
-            <p>Comprehensive rehabilitation care in Tripoli, Lebanon — combining modern
-            physiotherapy with evidence-based complementary medicine since 1990.</p>
-          </div>
-          <div class="footer-links">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#services">Isokinetic Therapy</a></li>
-              <li><a href="#services">Acupuncture</a></li>
-              <li><a href="#services">Osteopathy</a></li>
-              <li><a href="#services">Thermography</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4>Conditions</h4>
-            <ul>
-              <li><a href="#conditions">Low Back Pain</a></li>
-              <li><a href="#conditions">Neck Pain</a></li>
-              <li><a href="#conditions">Knee Pain</a></li>
-              <li><a href="#conditions">Migraines</a></li>
-              <li><a href="#conditions">Sports Injuries</a></li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h4>Contact</h4>
-            <p><a href="tel:+9613780236">+961 3 780 236</a></p>
-            <p><a href="https://wa.me/9613780236" target="_blank">WhatsApp</a></p>
-            <p><a href="#contact">Book Appointment</a></p>
-            <p><a href="https://maps.google.com/?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon" target="_blank">Get Directions</a></p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 SHRC — Saad Halimi Rehabilitation Center, Tripoli, Lebanon</p>
-          <div class="social-footer">
-            <a href="https://facebook.com/shrchealth" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/shrchealth" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/9613780236" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // Mobile menu toggle
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('navMenu');
-      const navLinks = navMenu.querySelectorAll('a');
-
-      if (hamburger) {
-        hamburger.addEventListener('click', () => {
-          navMenu.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-
-        navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-          });
-        });
-      }
-
-      // Booking form WhatsApp integration
-      const bookingForm = document.getElementById('bookingForm');
-      if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const formData = new FormData(bookingForm);
-          const message = `New SHRC Appointment Request\n\nName: ${formData.get('name')}\nPhone: ${formData.get('phone')}\nService: ${formData.get('service')}\nPreferred Time: ${formData.get('time')}\nMessage: ${formData.get('message')}`;
-          const whatsappUrl = `https://wa.me/961XXXXXXXXX?text=${encodeURIComponent(message)}`;
-          window.open(whatsappUrl, '_blank');
-        });
-      }
-    </script>
-  </body>
-</html>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="section services" id="services">
-        <div class="container">
-          <h2>Our Services</h2>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-heartbeat"></i>
-              </div>
-              <h3>Physiotherapy</h3>
-              <p>
-                Evidence-based physical therapy to restore mobility, reduce
-                pain, and improve function through targeted exercises and manual
-                therapy techniques.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-bone"></i>
-              </div>
-              <h3>Osteopathy</h3>
-              <p>
-                Holistic osteopathic treatment addressing musculoskeletal issues
-                to improve body mechanics and overall wellness.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-spa"></i>
-              </div>
-              <h3>Acupuncture</h3>
-              <p>
-                Traditional acupuncture therapy to relieve pain, reduce
-                inflammation, and promote natural healing and relaxation.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h3>Group Classes</h3>
-              <p>
-                Specialized group sessions including rehabilitation exercises,
-                wellness programs, and preventative health workshops.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-clipboard-list"></i>
-              </div>
-              <h3>Injury Assessment</h3>
-              <p>
-                Comprehensive evaluation and diagnosis of injuries with detailed
-                treatment recommendations and recovery planning.
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-dumbbell"></i>
-              </div>
-              <h3>Rehabilitation Programs</h3>
-              <p>
-                Customized rehabilitation programs for post-surgical recovery,
-                sports injuries, and chronic conditions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials Section -->
-      <section class="section testimonials" id="testimonials">
-        <div class="container">
-          <h2>Patient Testimonials</h2>
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <p class="testimonial-text">
-                "The professional staff and personalized care I received made
-                all the difference in my recovery. I'm back to my normal
-                activities faster than I expected."
-              </p>
-              <div class="testimonial-author">
-                <strong>Ahmed M.</strong>
-                <span>Post-Surgery Recovery</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <p class="testimonial-text">
-                "Amazing experience from start to finish. The therapists are
-                highly skilled and truly care about their patients' well-being.
-                Highly recommended!"
-              </p>
-              <div class="testimonial-author">
-                <strong>Fatima K.</strong>
-                <span>Chronic Pain Management</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <p class="testimonial-text">
-                "I've tried other clinics, but SHRC is by far the best. The
-                comprehensive approach and attention to detail is unmatched.
-                Thank you!"
-              </p>
-              <div class="testimonial-author">
-                <strong>Omar S.</strong>
-                <span>Sports Injury Recovery</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Team Section -->
-      <section class="section team" id="team">
-        <div class="container">
-          <h2>Our Expert Team</h2>
-          <p class="section-intro">
-            Meet our dedicated healthcare professionals committed to your
-            wellness
-          </p>
-          <div class="team-grid">
-            <div class="team-card">
-              <div class="team-placeholder">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3>Dr. Saad Halimi</h3>
-              <p class="role">Founder & Chief Physiotherapist</p>
-              <p>
-                Specialized in rehabilitation medicine with 15+ years of
-                experience in patient recovery and wellness programs.
-              </p>
-            </div>
-            <div class="team-card">
-              <div class="team-placeholder">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3>Dr. Clinical Specialist</h3>
-              <p class="role">Senior Therapist</p>
-              <p>
-                Expert in osteopathy and manual therapy techniques with
-                certifications in advanced rehabilitation methods.
-              </p>
-            </div>
-            <div class="team-card">
-              <div class="team-placeholder">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3>Acupuncture Specialist</h3>
-              <p class="role">Licensed Acupuncturist</p>
-              <p>
-                Certified in traditional Chinese medicine and modern acupuncture
-                practices for pain management and wellness.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <h2>Get in Touch</h2>
-          <div class="grid two-col">
             <div class="contact-info">
-              <h3>Contact Information</h3>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
+
+              <div class="contact-info-card reveal">
+                <div class="contact-info-icon contact-info-icon--blue">
+                  <i class="fas fa-location-dot"></i>
+                </div>
                 <div>
                   <strong>Location</strong>
-                  <p>Tripoli, Lebanon</p>
+                  <span>Face to Nini Hospital, Hazem El Jisr Street, Tripoli, Lebanon</span>
                 </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
+
+              <div class="contact-info-card reveal reveal--delay-1">
+                <div class="contact-info-icon contact-info-icon--emerald">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
                 <div>
-                  <strong>Phone</strong>
-                  <p><a href="tel:+961XXXXXXXXX">+961 XX XXX XXX</a></p>
+                  <strong>Phone / WhatsApp</strong>
+                  <a href="https://wa.me/9613780236" class="contact-info-link">+961 3 780 236 &rarr;</a>
                 </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
+
+              <div class="contact-info-card reveal reveal--delay-2">
+                <div class="contact-info-icon contact-info-icon--purple">
+                  <i class="fas fa-clock"></i>
+                </div>
                 <div>
-                  <strong>Email</strong>
-                  <p>
-                    <a href="mailto:info@shrchealth.com">info@shrchealth.com</a>
-                  </p>
+                  <strong>Opening Hours</strong>
+                  <span>Mon&ndash;Fri: 8:00 AM &ndash; 7:00 PM</span>
+                  <span>Saturday: 8:00 AM &ndash; 2:00 PM</span>
                 </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-clock"></i>
-                <div>
-                  <strong>Hours</strong>
-                  <p>
-                    Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun:
-                    Closed
-                  </p>
-                </div>
+
+              <div class="contact-map reveal reveal--delay-3">
+                <iframe title="SHRC Location Map"
+                  src="https://www.google.com/maps?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon&output=embed"
+                  loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
+
             </div>
-            <div class="contact-form">
-              <h3>Book an Appointment</h3>
-              <form>
-                <div class="form-group">
-                  <input type="text" placeholder="Your Name" required />
-                </div>
-                <div class="form-group">
-                  <input type="email" placeholder="Your Email" required />
-                </div>
-                <div class="form-group">
-                  <input type="tel" placeholder="Your Phone" />
-                </div>
-                <div class="form-group">
-                  <select required>
-                    <option value="">Select Service</option>
-                    <option value="physiotherapy">Physiotherapy</option>
-                    <option value="osteopathy">Osteopathy</option>
-                    <option value="acupuncture">Acupuncture</option>
-                    <option value="consultation">Consultation</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <textarea
-                    placeholder="Message or Special Requests"
-                    rows="4"
-                  ></textarea>
-                </div>
-                <button type="submit" class="cta">Submit</button>
-              </form>
-            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+
+              <div class="form-row">
+                <label class="form-group">
+                  <span class="form-label">Full Name</span>
+                  <input type="text" name="name" required placeholder="Your full name" class="form-input" />
+                </label>
+                <label class="form-group">
+                  <span class="form-label">Phone Number</span>
+                  <input type="tel" name="phone" required placeholder="+961 X XXX XXX" class="form-input" />
+                </label>
+              </div>
+
+              <label class="form-group">
+                <span class="form-label">Service</span>
+                <select name="service" required class="form-input form-select">
+                  <option value="">Select a service</option>
+                  <option value="Isokinetic Therapy">Isokinetic Therapy</option>
+                  <option value="Acupuncture">Acupuncture</option>
+                  <option value="Osteopathy">Osteopathy</option>
+                  <option value="Medical Thermography">Medical Thermography</option>
+                  <option value="Ergonomy">Ergonomy</option>
+                  <option value="Women's Health">Women's Health</option>
+                  <option value="SkinPen Microneedling">SkinPen Microneedling</option>
+                  <option value="Cupping Therapy">Cupping Therapy</option>
+                  <option value="LPG Body Treatment">LPG Body Treatment</option>
+                </select>
+              </label>
+
+              <label class="form-group">
+                <span class="form-label">Preferred Day / Time</span>
+                <input type="text" name="preferredDateTime" required
+                  placeholder="e.g. Tuesday, 10:30 AM" class="form-input" />
+              </label>
+
+              <label class="form-group">
+                <span class="form-label">Message</span>
+                <textarea name="message" rows="4" required
+                  placeholder="Tell us briefly about your condition or request."
+                  class="form-input form-textarea"></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-submit">
+                <i class="fab fa-whatsapp"></i> Send on WhatsApp
+              </button>
+
+            </form>
+
           </div>
         </div>
       </section>
 
-      <!-- Social Media Section -->
-      <section class="section social">
-        <div class="container">
-          <h2>Follow Us</h2>
-          <p class="section-intro">
-            Stay updated with our latest news and wellness tips
-          </p>
-          <div class="social-links">
-            <a
-              href="https://www.youtube.com/channel/UCKnAruS1_PaR3XhLlYxvqaA"
-              target="_blank"
-              class="social-link youtube"
-              title="YouTube"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/SHRChealth"
-              target="_blank"
-              class="social-link facebook"
-              title="Facebook"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://instagram.com/shrchealth"
-              target="_blank"
-              class="social-link instagram"
-              title="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.tiktok.com/@shrchealth/"
-              target="_blank"
-              class="social-link tiktok"
-              title="TikTok"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/shrchealth"
-              target="_blank"
-              class="social-link linkedin"
-              title="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
+
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>SHRC Health</h3>
-            <p>
-              Professional health and rehabilitation center dedicated to your
-              wellness and recovery.
-            </p>
+        <div class="footer-cta">
+          <div class="footer-cta-blob" aria-hidden="true"></div>
+          <div class="footer-cta-content">
+            <div class="footer-cta-text">
+              <h3>Ready to start your recovery?</h3>
+              <p>Book a comprehensive evaluation today. Our specialists will design a custom
+              protocol for your specific needs.</p>
+            </div>
+            <a href="https://wa.me/9613780236" target="_blank" rel="noopener noreferrer" class="btn btn-white">
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
           </div>
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Contact</h4>
-            <p>Phone: <a href="tel:+9613780236">+961 3 780 236</a></p>
-            <p>
-              Email:
-              <a href="mailto:info@shrchealth.com">info@shrchealth.com</a>
-            </p>
-            <p>Tripoli, Lebanon</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2026 SHRC Health - Saad Halimi Rehabilitation Center. All
-            rights reserved.
-          </p>
         </div>
       </div>
+
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-heartbeat"></i></div>
+            <span>SHRC<span class="footer-logo-dot">.</span></span>
+          </div>
+          <p>Setting the standard for integrative physical therapy, osteopathy, and complementary
+          medicine in North Lebanon since 1990.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/SHRChealth"   target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/shrchealth"       target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/shrchealth" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/channel/UCKnAruS1_PaR3XhLlYxvqaA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@shrchealth/"   target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#conditions">Conditions</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>Location &amp; Hours</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <div>
+              <strong>Tripoli, Lebanon</strong>
+              <span>Hazem El Jisr Street, Facing Nini Hospital</span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <div class="footer-hours-row"><span>Mon &ndash; Fri</span><strong>8 AM &ndash; 7 PM</strong></div>
+              <div class="footer-hours-row"><span>Saturday</span><strong>8 AM &ndash; 2 PM</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="currentYear"></span> SHRC &mdash; Saad Halimi Rehabilitation Center. All rights reserved.</p>
+          <p class="footer-bottom-tag">Designed with precision.</p>
+        </div>
+      </div>
+
     </footer>
 
     <script>
-      // Mobile menu toggle
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-      if (hamburger) {
-        hamburger.addEventListener("click", () => {
-          navMenu.classList.toggle("active");
-        });
-      }
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 30);
+      }, { passive: true });
 
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-            navMenu.classList.remove("active");
-          }
+      const hamburger  = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+      });
+      mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-open');
+          mobileMenu.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
         });
       });
 
-      // Form submission
-      const contactForm = document.querySelector(".contact-form form");
+      const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObs.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+      const contactForm = document.getElementById('contactForm');
       if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
+        contactForm.addEventListener('submit', (e) => {
           e.preventDefault();
-          alert("Thank you for your inquiry! We will contact you shortly.");
-          contactForm.reset();
+          const d = new FormData(contactForm);
+          const msg = [
+            'New SHRC Appointment Request', '',
+            `Name: ${d.get('name')}`,
+            `Phone: ${d.get('phone')}`,
+            `Service: ${d.get('service')}`,
+            `Preferred Day/Time: ${d.get('preferredDateTime')}`,
+            `Message: ${d.get('message')}`,
+          ].join('\n');
+          window.open(`https://wa.me/9613780236?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
         });
       }
     </script>
