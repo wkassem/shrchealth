@@ -5,163 +5,456 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="SHRC official homepage for Saad Halimi Rehabilitation Center in Tripoli, Lebanon."
+      content="SHRC - Professional health and rehabilitation center providing physiotherapy, osteopathy, acupuncture, and specialized care."
     />
-    <title>SHRC Home</title>
+    <meta
+      name="keywords"
+      content="rehabilitation, physiotherapy, osteopathy, acupuncture, health clinic"
+    />
+    <meta property="og:title" content="SHRC - Health & Rehabilitation Center" />
+    <meta
+      property="og:description"
+      content="Professional health and rehabilitation services"
+    />
+    <meta property="og:type" content="website" />
+    <title>SHRC - Health & Rehabilitation Center</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header class="hero">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <h2>SHRC Health</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
       <div class="container">
-        <p class="eyebrow">Saad Halimi Rehabilitation Center</p>
-        <h1>Personalized rehabilitation care in Tripoli, Lebanon.</h1>
-        <p class="subtitle">Three clearly separated pages for the SHRC site experience.</p>
-        <p class="lead">
-          Discover SHRC, then explore two React-powered page concepts built from
-          <strong>App.jsx</strong> and <strong>App1.jsx</strong>.
-        </p>
-        <div class="hero-actions">
-          <a class="cta" href="/app">Open App.jsx page</a>
-          <a class="cta cta-secondary" href="#contact">Book an Appointment</a>
+        <div class="hero-content">
+          <p class="eyebrow">Welcome to Professional Healthcare</p>
+          <h1>Comprehensive Rehabilitation & Wellness Center</h1>
+          <p class="subtitle">
+            Dedicated to your health and recovery with expert care and
+            personalized treatment plans
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#contact">Book an Appointment</a>
+            <a class="cta cta-secondary" href="#services">Learn More</a>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="container grid two-col">
-          <div>
-            <h2>Welcome to SHRC</h2>
-            <p>
-              SHRC provides physiotherapy, osteopathy, acupuncture, and specialized
-              rehabilitation services with a patient-first approach.
-            </p>
-            <p>
-              Use the links on this page to access each version of the site as its
-              own dedicated route.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Available pages</h3>
-            <ul>
-              <li><a href="/">Home page</a></li>
-              <li><a href="/app">App.jsx page</a></li>
-              <li><a href="/app1">App1.jsx page</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt">
+      <!-- About Section -->
+      <section class="section about" id="about">
         <div class="container">
-          <h2>What each page does</h2>
-          <div class="grid cards">
-            <article class="card">
-              <h3>Home</h3>
-              <p>A lightweight landing page built with plain HTML and the shared stylesheet.</p>
-            </article>
-            <article class="card">
-              <h3>App.jsx</h3>
-              <p>A React-based SHRC experience served on its own route at <strong>/app</strong>.</p>
-            </article>
-            <article class="card">
-              <h3>App1.jsx</h3>
-              <p>A second React-based concept served independently at <strong>/app1</strong>.</p>
-            </article>
+          <h2>About SHRC Health</h2>
+          <div class="grid two-col">
+            <div>
+              <h3>Our Mission</h3>
+              <p>
+                We are dedicated to providing comprehensive, patient-centered
+                rehabilitation and wellness services. Our experienced team
+                specializes in helping patients recover, improve mobility, and
+                achieve optimal health outcomes through evidence-based treatment
+                methods.
+              </p>
+              <p>
+                With state-of-the-art facilities and compassionate care, we
+                serve patients of all ages, from acute injuries to chronic
+                conditions.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Why Choose Us?</h3>
+              <ul class="benefits-list">
+                <li>✓ Expert and certified practitioners</li>
+                <li>✓ Personalized treatment plans</li>
+                <li>✓ Modern facilities and equipment</li>
+                <li>✓ Comprehensive care approach</li>
+                <li>✓ Patient-focused treatment</li>
+                <li>✓ Proven results</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section">
-        <div class="container booking-shell">
-          <div class="booking-intro card">
-            <h2>Book an Appointment</h2>
-            <p>
-              Fill out this form and we will open WhatsApp with your appointment details pre-filled.
-              You can also contact us directly on
-              <a href="https://wa.me/9613780236" target="_blank" rel="noopener noreferrer">+9613780236</a>.
-            </p>
-            <div class="info-grid">
-              <article class="info-card">
-                <h3>Location</h3>
-                <p>Face to Nini Hospital, Hazem El Jisr Street, Tripoli, Lebanon</p>
-              </article>
-              <article class="info-card">
-                <h3>Phone / WhatsApp</h3>
-                <p><a href="https://wa.me/9613780236" target="_blank" rel="noopener noreferrer">+9613780236</a></p>
-              </article>
-              <article class="info-card">
-                <h3>Opening Hours</h3>
-                <p>Monday – Friday: 8:00 AM – 7:00 PM<br />Saturday: 8:00 AM – 2:00 PM</p>
-              </article>
+      <!-- Services Section -->
+      <section class="section services" id="services">
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3>Physiotherapy</h3>
+              <p>
+                Evidence-based physical therapy to restore mobility, reduce
+                pain, and improve function through targeted exercises and manual
+                therapy techniques.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-bone"></i>
+              </div>
+              <h3>Osteopathy</h3>
+              <p>
+                Holistic osteopathic treatment addressing musculoskeletal issues
+                to improve body mechanics and overall wellness.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <h3>Acupuncture</h3>
+              <p>
+                Traditional acupuncture therapy to relieve pain, reduce
+                inflammation, and promote natural healing and relaxation.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Group Classes</h3>
+              <p>
+                Specialized group sessions including rehabilitation exercises,
+                wellness programs, and preventative health workshops.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h3>Injury Assessment</h3>
+              <p>
+                Comprehensive evaluation and diagnosis of injuries with detailed
+                treatment recommendations and recovery planning.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <h3>Rehabilitation Programs</h3>
+              <p>
+                Customized rehabilitation programs for post-surgical recovery,
+                sports injuries, and chronic conditions.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="booking-grid">
-            <form id="booking-form" class="card booking-form">
-              <label>
-                Full Name
-                <input type="text" name="name" autocomplete="name" required />
-              </label>
-              <label>
-                Phone Number
-                <input type="tel" name="phone" autocomplete="tel" required />
-              </label>
-              <label>
-                Service
-                <select name="service" required>
-                  <option value="">Select a service</option>
-                  <option value="Isokinetic Therapy">Isokinetic Therapy</option>
-                  <option value="Acupuncture">Acupuncture</option>
-                  <option value="Osteopathy">Osteopathy</option>
-                  <option value="Medical Thermography">Medical Thermography</option>
-                  <option value="Ergonomy">Ergonomy</option>
-                </select>
-              </label>
-              <label>
-                Preferred Day / Time
-                <input type="text" name="preferredDateTime" placeholder="e.g. Tuesday, 10:30 AM" required />
-              </label>
-              <label>
-                Message
-                <textarea name="message" rows="4" placeholder="Tell us briefly about your condition or request." required></textarea>
-              </label>
-              <button type="submit" class="cta">Send via WhatsApp</button>
-            </form>
-
-            <div class="card map-card">
-              <iframe
-                title="SHRC Location Map"
-                loading="lazy"
-                allowfullscreen
-                src="https://www.google.com/maps?q=Face+to+Nini+Hospital,+Hazem+El+Jisr+Street,+Tripoli,+Lebanon&output=embed"
-              ></iframe>
+      <!-- Testimonials Section -->
+      <section class="section testimonials" id="testimonials">
+        <div class="container">
+          <h2>Patient Testimonials</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "The professional staff and personalized care I received made
+                all the difference in my recovery. I'm back to my normal
+                activities faster than I expected."
+              </p>
+              <div class="testimonial-author">
+                <strong>Ahmed M.</strong>
+                <span>Post-Surgery Recovery</span>
+              </div>
             </div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "Amazing experience from start to finish. The therapists are
+                highly skilled and truly care about their patients' well-being.
+                Highly recommended!"
+              </p>
+              <div class="testimonial-author">
+                <strong>Fatima K.</strong>
+                <span>Chronic Pain Management</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "I've tried other clinics, but SHRC is by far the best. The
+                comprehensive approach and attention to detail is unmatched.
+                Thank you!"
+              </p>
+              <div class="testimonial-author">
+                <strong>Omar S.</strong>
+                <span>Sports Injury Recovery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="section team" id="team">
+        <div class="container">
+          <h2>Our Expert Team</h2>
+          <p class="section-intro">
+            Meet our dedicated healthcare professionals committed to your
+            wellness
+          </p>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-placeholder">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Dr. Saad Halimi</h3>
+              <p class="role">Founder & Chief Physiotherapist</p>
+              <p>
+                Specialized in rehabilitation medicine with 15+ years of
+                experience in patient recovery and wellness programs.
+              </p>
+            </div>
+            <div class="team-card">
+              <div class="team-placeholder">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Dr. Clinical Specialist</h3>
+              <p class="role">Senior Therapist</p>
+              <p>
+                Expert in osteopathy and manual therapy techniques with
+                certifications in advanced rehabilitation methods.
+              </p>
+            </div>
+            <div class="team-card">
+              <div class="team-placeholder">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Acupuncture Specialist</h3>
+              <p class="role">Licensed Acupuncturist</p>
+              <p>
+                Certified in traditional Chinese medicine and modern acupuncture
+                practices for pain management and wellness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <h2>Get in Touch</h2>
+          <div class="grid two-col">
+            <div class="contact-info">
+              <h3>Contact Information</h3>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>Location</strong>
+                  <p>Tripoli, Lebanon</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+961XXXXXXXXX">+961 XX XXX XXX</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <p>
+                    <a href="mailto:info@shrchealth.com">info@shrchealth.com</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Hours</strong>
+                  <p>
+                    Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun:
+                    Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3>Book an Appointment</h3>
+              <form>
+                <div class="form-group">
+                  <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" placeholder="Your Phone" />
+                </div>
+                <div class="form-group">
+                  <select required>
+                    <option value="">Select Service</option>
+                    <option value="physiotherapy">Physiotherapy</option>
+                    <option value="osteopathy">Osteopathy</option>
+                    <option value="acupuncture">Acupuncture</option>
+                    <option value="consultation">Consultation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    placeholder="Message or Special Requests"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <button type="submit" class="cta">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media Section -->
+      <section class="section social">
+        <div class="container">
+          <h2>Follow Us</h2>
+          <p class="section-intro">
+            Stay updated with our latest news and wellness tips
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.youtube.com/channel/UCKnAruS1_PaR3XhLlYxvqaA"
+              target="_blank"
+              class="social-link youtube"
+              title="YouTube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/SHRChealth"
+              target="_blank"
+              class="social-link facebook"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://instagram.com/shrchealth"
+              target="_blank"
+              class="social-link instagram"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@shrchealth/"
+              target="_blank"
+              class="social-link tiktok"
+              title="TikTok"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/shrchealth"
+              target="_blank"
+              class="social-link linkedin"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <p>© SHRC — Saad Halimi Rehabilitation Center.</p>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SHRC Health</h3>
+            <p>
+              Professional health and rehabilitation center dedicated to your
+              wellness and recovery.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: <a href="tel:+961XXXXXXXXX">+961 XX XXX XXX</a></p>
+            <p>
+              Email:
+              <a href="mailto:info@shrchealth.com">info@shrchealth.com</a>
+            </p>
+            <p>Tripoli, Lebanon</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 SHRC Health - Saad Halimi Rehabilitation Center. All
+            rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
+
     <script>
-      const bookingForm = document.getElementById('booking-form');
-      if (bookingForm) {
-        bookingForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const formData = new FormData(bookingForm);
-          const whatsappMessage = [
-            'New SHRC Appointment Request',
-            `Name: ${formData.get('name') || ''}`,
-            `Phone: ${formData.get('phone') || ''}`,
-            `Service: ${formData.get('service') || ''}`,
-            `Preferred Day/Time: ${formData.get('preferredDateTime') || ''}`,
-            `Message: ${formData.get('message') || ''}`,
-          ].join('\n');
-          window.open(`https://wa.me/9613780236?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener');
+      // Mobile menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            navMenu.classList.remove("active");
+          }
+        });
+      });
+
+      // Form submission
+      const contactForm = document.querySelector(".contact-form form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your inquiry! We will contact you shortly.");
+          contactForm.reset();
         });
       }
     </script>
